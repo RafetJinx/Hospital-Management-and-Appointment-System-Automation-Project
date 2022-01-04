@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblTC = new System.Windows.Forms.Label();
+            this.llblUpdateDetail = new System.Windows.Forms.LinkLabel();
             this.lblFullName = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbBranch = new System.Windows.Forms.ComboBox();
+            this.lblTC = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAppointment = new System.Windows.Forms.Button();
+            this.rtxtReport = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.cbDoctors = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.rtxtReport = new System.Windows.Forms.RichTextBox();
-            this.btnAppointment = new System.Windows.Forms.Button();
+            this.cbBranch = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.llblUpdateDetail = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -63,10 +63,56 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(257, 186);
+            this.groupBox1.Size = new System.Drawing.Size(262, 186);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Patient Detail";
+            // 
+            // llblUpdateDetail
+            // 
+            this.llblUpdateDetail.AutoSize = true;
+            this.llblUpdateDetail.Location = new System.Drawing.Point(9, 148);
+            this.llblUpdateDetail.Name = "llblUpdateDetail";
+            this.llblUpdateDetail.Size = new System.Drawing.Size(150, 23);
+            this.llblUpdateDetail.TabIndex = 6;
+            this.llblUpdateDetail.TabStop = true;
+            this.llblUpdateDetail.Text = "Bilgilerini Duzenle";
+            // 
+            // lblFullName
+            // 
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.Location = new System.Drawing.Point(128, 99);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(57, 23);
+            this.lblFullName.TabIndex = 3;
+            this.lblFullName.Text = "NULL";
+            // 
+            // lblTC
+            // 
+            this.lblTC.AutoSize = true;
+            this.lblTC.Location = new System.Drawing.Point(128, 56);
+            this.lblTC.Name = "lblTC";
+            this.lblTC.Size = new System.Drawing.Size(131, 23);
+            this.lblTC.TabIndex = 2;
+            this.lblTC.Text = "00000000000";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 23);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ad Soyad:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "TC No:";
             // 
             // groupBox2
             // 
@@ -79,73 +125,36 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(0, 192);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(257, 314);
+            this.groupBox2.Size = new System.Drawing.Size(262, 314);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Paneli";
             // 
-            // groupBox3
+            // btnAppointment
             // 
-            this.groupBox3.Controls.Add(this.dataGridView2);
-            this.groupBox3.Location = new System.Drawing.Point(265, 12);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(575, 260);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Randevu Gecmisi";
+            this.btnAppointment.Location = new System.Drawing.Point(92, 260);
+            this.btnAppointment.Name = "btnAppointment";
+            this.btnAppointment.Size = new System.Drawing.Size(131, 46);
+            this.btnAppointment.TabIndex = 2;
+            this.btnAppointment.Text = "Randevu Al";
+            this.btnAppointment.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // rtxtReport
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "TC No:";
+            this.rtxtReport.Location = new System.Drawing.Point(92, 153);
+            this.rtxtReport.Name = "rtxtReport";
+            this.rtxtReport.Size = new System.Drawing.Size(131, 92);
+            this.rtxtReport.TabIndex = 5;
+            this.rtxtReport.Text = "";
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ad Soyad:";
-            // 
-            // lblTC
-            // 
-            this.lblTC.AutoSize = true;
-            this.lblTC.Location = new System.Drawing.Point(128, 56);
-            this.lblTC.Name = "lblTC";
-            this.lblTC.Size = new System.Drawing.Size(131, 23);
-            this.lblTC.TabIndex = 2;
-            this.lblTC.Text = "00000000000";
-            // 
-            // lblFullName
-            // 
-            this.lblFullName.AutoSize = true;
-            this.lblFullName.Location = new System.Drawing.Point(128, 99);
-            this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(57, 23);
-            this.lblFullName.TabIndex = 3;
-            this.lblFullName.Text = "NULL";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Brans:";
-            // 
-            // cbBranch
-            // 
-            this.cbBranch.FormattingEnabled = true;
-            this.cbBranch.Location = new System.Drawing.Point(92, 41);
-            this.cbBranch.Name = "cbBranch";
-            this.cbBranch.Size = new System.Drawing.Size(131, 31);
-            this.cbBranch.TabIndex = 1;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 153);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 23);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Sikayet:";
             // 
             // cbDoctors
             // 
@@ -164,36 +173,46 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Doktor:";
             // 
-            // label5
+            // cbBranch
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 153);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 23);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Sikayet:";
+            this.cbBranch.FormattingEnabled = true;
+            this.cbBranch.Location = new System.Drawing.Point(92, 41);
+            this.cbBranch.Name = "cbBranch";
+            this.cbBranch.Size = new System.Drawing.Size(131, 31);
+            this.cbBranch.TabIndex = 1;
             // 
-            // rtxtReport
+            // label3
             // 
-            this.rtxtReport.Location = new System.Drawing.Point(92, 153);
-            this.rtxtReport.Name = "rtxtReport";
-            this.rtxtReport.Size = new System.Drawing.Size(131, 92);
-            this.rtxtReport.TabIndex = 5;
-            this.rtxtReport.Text = "";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 23);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Brans:";
             // 
-            // btnAppointment
+            // groupBox3
             // 
-            this.btnAppointment.Location = new System.Drawing.Point(92, 260);
-            this.btnAppointment.Name = "btnAppointment";
-            this.btnAppointment.Size = new System.Drawing.Size(131, 46);
-            this.btnAppointment.TabIndex = 2;
-            this.btnAppointment.Text = "Randevu Al";
-            this.btnAppointment.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.dataGridView2);
+            this.groupBox3.Location = new System.Drawing.Point(268, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(575, 260);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Randevu Gecmisi";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 27);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(569, 230);
+            this.dataGridView2.TabIndex = 0;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dataGridView1);
-            this.groupBox4.Location = new System.Drawing.Point(265, 278);
+            this.groupBox4.Location = new System.Drawing.Point(268, 278);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(575, 228);
             this.groupBox4.TabIndex = 2;
@@ -209,25 +228,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(569, 198);
             this.dataGridView1.TabIndex = 0;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 27);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(569, 230);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // llblUpdateDetail
-            // 
-            this.llblUpdateDetail.AutoSize = true;
-            this.llblUpdateDetail.Location = new System.Drawing.Point(9, 148);
-            this.llblUpdateDetail.Name = "llblUpdateDetail";
-            this.llblUpdateDetail.Size = new System.Drawing.Size(150, 23);
-            this.llblUpdateDetail.TabIndex = 6;
-            this.llblUpdateDetail.TabStop = true;
-            this.llblUpdateDetail.Text = "Bilgilerini Duzenle";
-            // 
             // FrmPatientDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
@@ -239,7 +239,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmPatientDetail";
             this.Text = "FrmPatientDetail";
             this.groupBox1.ResumeLayout(false);
@@ -247,9 +247,9 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
