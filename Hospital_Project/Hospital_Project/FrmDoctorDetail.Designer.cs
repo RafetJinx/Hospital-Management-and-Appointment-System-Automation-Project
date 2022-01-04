@@ -39,7 +39,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnUpdateDoctorDetail = new System.Windows.Forms.Button();
             this.btnAnnouncement = new System.Windows.Forms.Button();
-            this.btnEthernet = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
@@ -130,7 +129,6 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btnExit);
-            this.groupBox4.Controls.Add(this.btnEthernet);
             this.groupBox4.Controls.Add(this.btnAnnouncement);
             this.groupBox4.Controls.Add(this.btnUpdateDoctorDetail);
             this.groupBox4.Location = new System.Drawing.Point(4, 396);
@@ -144,34 +142,25 @@
             // 
             this.btnUpdateDoctorDetail.Location = new System.Drawing.Point(8, 30);
             this.btnUpdateDoctorDetail.Name = "btnUpdateDoctorDetail";
-            this.btnUpdateDoctorDetail.Size = new System.Drawing.Size(129, 36);
+            this.btnUpdateDoctorDetail.Size = new System.Drawing.Size(113, 88);
             this.btnUpdateDoctorDetail.TabIndex = 5;
             this.btnUpdateDoctorDetail.Text = "Bilgi Duzenle";
             this.btnUpdateDoctorDetail.UseVisualStyleBackColor = true;
             // 
             // btnAnnouncement
             // 
-            this.btnAnnouncement.Location = new System.Drawing.Point(143, 30);
+            this.btnAnnouncement.Location = new System.Drawing.Point(129, 30);
             this.btnAnnouncement.Name = "btnAnnouncement";
-            this.btnAnnouncement.Size = new System.Drawing.Size(120, 36);
+            this.btnAnnouncement.Size = new System.Drawing.Size(134, 36);
             this.btnAnnouncement.TabIndex = 6;
             this.btnAnnouncement.Text = "Duyurular";
             this.btnAnnouncement.UseVisualStyleBackColor = true;
             // 
-            // btnEthernet
-            // 
-            this.btnEthernet.Location = new System.Drawing.Point(8, 82);
-            this.btnEthernet.Name = "btnEthernet";
-            this.btnEthernet.Size = new System.Drawing.Size(129, 36);
-            this.btnEthernet.TabIndex = 7;
-            this.btnEthernet.Text = "Internet";
-            this.btnEthernet.UseVisualStyleBackColor = true;
-            // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(143, 82);
+            this.btnExit.Location = new System.Drawing.Point(129, 82);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(120, 36);
+            this.btnExit.Size = new System.Drawing.Size(134, 36);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Cikis";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -222,7 +211,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnEthernet;
         private System.Windows.Forms.Button btnAnnouncement;
         private System.Windows.Forms.Button btnUpdateDoctorDetail;
     }
