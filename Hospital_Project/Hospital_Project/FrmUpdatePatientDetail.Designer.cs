@@ -49,9 +49,10 @@
             this.btnUpdatePatientDetail.Location = new System.Drawing.Point(319, 314);
             this.btnUpdatePatientDetail.Name = "btnUpdatePatientDetail";
             this.btnUpdatePatientDetail.Size = new System.Drawing.Size(137, 64);
-            this.btnUpdatePatientDetail.TabIndex = 31;
+            this.btnUpdatePatientDetail.TabIndex = 7;
             this.btnUpdatePatientDetail.Text = "Bilgileri Guncelle";
             this.btnUpdatePatientDetail.UseVisualStyleBackColor = true;
+            this.btnUpdatePatientDetail.Click += new System.EventHandler(this.btnUpdatePatientDetail_Click);
             // 
             // cbGender
             // 
@@ -62,7 +63,7 @@
             this.cbGender.Location = new System.Drawing.Point(319, 277);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(137, 31);
-            this.cbGender.TabIndex = 30;
+            this.cbGender.TabIndex = 6;
             // 
             // txtName
             // 
@@ -70,7 +71,7 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(137, 31);
-            this.txtName.TabIndex = 29;
+            this.txtName.TabIndex = 1;
             // 
             // txtLastName
             // 
@@ -78,7 +79,7 @@
             this.txtLastName.Margin = new System.Windows.Forms.Padding(5);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(137, 31);
-            this.txtLastName.TabIndex = 28;
+            this.txtLastName.TabIndex = 2;
             // 
             // msktxtTelNum
             // 
@@ -87,7 +88,7 @@
             this.msktxtTelNum.Mask = "(999) 000-0000";
             this.msktxtTelNum.Name = "msktxtTelNum";
             this.msktxtTelNum.Size = new System.Drawing.Size(137, 31);
-            this.msktxtTelNum.TabIndex = 27;
+            this.msktxtTelNum.TabIndex = 4;
             // 
             // label6
             // 
@@ -134,7 +135,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(137, 31);
-            this.txtPassword.TabIndex = 22;
+            this.txtPassword.TabIndex = 5;
             // 
             // msktxtTC
             // 
@@ -143,7 +144,7 @@
             this.msktxtTC.Mask = "00000000000";
             this.msktxtTC.Name = "msktxtTC";
             this.msktxtTC.Size = new System.Drawing.Size(137, 31);
-            this.msktxtTC.TabIndex = 21;
+            this.msktxtTC.TabIndex = 3;
             this.msktxtTC.ValidatingType = typeof(int);
             // 
             // label3
@@ -200,6 +201,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "FrmUpdatePatientDetail";
             this.Text = "FrmUpdatePatientDetail";
+            this.Load += new System.EventHandler(this.FrmUpdatePatientDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

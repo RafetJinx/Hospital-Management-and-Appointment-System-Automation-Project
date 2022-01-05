@@ -40,6 +40,7 @@ namespace Hospital_Project
             if (sqlDataReader.Read())
             {
                 FrmPatientDetail frm = new FrmPatientDetail();
+                frm.Tc = msktxtTC.Text;
                 frm.Show();
                 this.Hide();
             }

@@ -67,6 +67,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Patient Detail";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // llblUpdateDetail
             // 
@@ -77,6 +78,7 @@
             this.llblUpdateDetail.TabIndex = 6;
             this.llblUpdateDetail.TabStop = true;
             this.llblUpdateDetail.Text = "Bilgilerini Duzenle";
+            this.llblUpdateDetail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblUpdateDetail_LinkClicked);
             // 
             // lblFullName
             // 
@@ -163,6 +165,7 @@
             this.cbDoctors.Name = "cbDoctors";
             this.cbDoctors.Size = new System.Drawing.Size(131, 31);
             this.cbDoctors.TabIndex = 3;
+            this.cbDoctors.SelectedIndexChanged += new System.EventHandler(this.cbDoctors_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -180,6 +183,7 @@
             this.cbBranch.Name = "cbBranch";
             this.cbBranch.Size = new System.Drawing.Size(131, 31);
             this.cbBranch.TabIndex = 1;
+            this.cbBranch.SelectedIndexChanged += new System.EventHandler(this.cbBranch_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -242,6 +246,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmPatientDetail";
             this.Text = "FrmPatientDetail";
+            this.Load += new System.EventHandler(this.FrmPatientDetail_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
