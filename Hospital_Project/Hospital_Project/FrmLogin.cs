@@ -37,5 +37,10 @@ namespace Hospital_Project
             frm.Show();
             this.Hide();
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

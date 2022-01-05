@@ -71,7 +71,7 @@
             this.msktxtTC.Mask = "00000000000";
             this.msktxtTC.Name = "msktxtTC";
             this.msktxtTC.Size = new System.Drawing.Size(110, 31);
-            this.msktxtTC.TabIndex = 3;
+            this.msktxtTC.TabIndex = 1;
             this.msktxtTC.ValidatingType = typeof(int);
             // 
             // txtPassword
@@ -79,7 +79,8 @@
             this.txtPassword.Location = new System.Drawing.Point(215, 149);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(110, 31);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // llblSignUp
             // 
@@ -87,18 +88,20 @@
             this.llblSignUp.Location = new System.Drawing.Point(117, 213);
             this.llblSignUp.Name = "llblSignUp";
             this.llblSignUp.Size = new System.Drawing.Size(62, 23);
-            this.llblSignUp.TabIndex = 5;
+            this.llblSignUp.TabIndex = 4;
             this.llblSignUp.TabStop = true;
             this.llblSignUp.Text = "Uye Ol";
+            this.llblSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblSignUp_LinkClicked);
             // 
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(215, 194);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(110, 42);
-            this.btnLogin.TabIndex = 6;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Giris Yap";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FrmPatientLogin
             // 
@@ -114,9 +117,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmPatientLogin";
             this.Text = "FrmPatientLogin";
+            this.Load += new System.EventHandler(this.FrmPatientLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

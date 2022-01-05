@@ -47,19 +47,19 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(214, 231);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(137, 31);
-            this.txtPassword.TabIndex = 8;
+            this.txtPassword.TabIndex = 5;
             // 
             // msktxtTC
             // 
             this.msktxtTC.Location = new System.Drawing.Point(214, 149);
-            this.msktxtTC.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.msktxtTC.Margin = new System.Windows.Forms.Padding(5);
             this.msktxtTC.Mask = "00000000000";
             this.msktxtTC.Name = "msktxtTC";
             this.msktxtTC.Size = new System.Drawing.Size(137, 31);
-            this.msktxtTC.TabIndex = 7;
+            this.msktxtTC.TabIndex = 3;
             this.msktxtTC.ValidatingType = typeof(int);
             // 
             // label3
@@ -128,7 +128,7 @@
             this.msktxtTelNum.Mask = "(999) 000-0000";
             this.msktxtTelNum.Name = "msktxtTelNum";
             this.msktxtTelNum.Size = new System.Drawing.Size(137, 31);
-            this.msktxtTelNum.TabIndex = 13;
+            this.msktxtTelNum.TabIndex = 4;
             // 
             // txtLastName
             // 
@@ -136,7 +136,7 @@
             this.txtLastName.Margin = new System.Windows.Forms.Padding(5);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(137, 31);
-            this.txtLastName.TabIndex = 14;
+            this.txtLastName.TabIndex = 2;
             // 
             // txtName
             // 
@@ -144,7 +144,7 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(137, 31);
-            this.txtName.TabIndex = 15;
+            this.txtName.TabIndex = 1;
             // 
             // cbGender
             // 
@@ -155,7 +155,7 @@
             this.cbGender.Location = new System.Drawing.Point(214, 270);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(137, 31);
-            this.cbGender.TabIndex = 16;
+            this.cbGender.TabIndex = 6;
             // 
             // label7
             // 
@@ -172,9 +172,10 @@
             this.btnSignUp.Location = new System.Drawing.Point(214, 307);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(137, 46);
-            this.btnSignUp.TabIndex = 18;
+            this.btnSignUp.TabIndex = 7;
             this.btnSignUp.Text = "Kayit Ol";
             this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // FrmPatientSignUp
             // 
@@ -197,9 +198,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmPatientSignUp";
-            this.Text = "FrmPatientSignUp";
+            this.Text = "Hasta Kayit Ekrani";
             this.ResumeLayout(false);
             this.PerformLayout();
 
