@@ -16,5 +16,26 @@ namespace Hospital_Project
         {
             InitializeComponent();
         }
+
+        private void btnPatient_Click(object sender, EventArgs e)
+        {
+            FrmPatientLogin frm = new FrmPatientLogin();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnDoctor_Click(object sender, EventArgs e)
+        {
+            FrmDoctorLogin frm = new FrmDoctorLogin();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnSecretary_Click(object sender, EventArgs e)
+        {
+            FrmSecretaryLogin frm = new FrmSecretaryLogin();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

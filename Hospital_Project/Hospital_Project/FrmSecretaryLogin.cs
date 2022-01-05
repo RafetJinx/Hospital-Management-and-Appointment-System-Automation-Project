@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hospital_Project
 {
-    public partial class FrmSecretary : Form
+    public partial class FrmSecretaryLogin : Form
     {
-        public FrmSecretary()
+        public FrmSecretaryLogin()
         {
             InitializeComponent();
         }

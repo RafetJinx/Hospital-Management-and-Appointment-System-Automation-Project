@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.btnPatient = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDoctor = new System.Windows.Forms.Button();
@@ -44,12 +45,13 @@
             // 
             // btnPatient
             // 
-            this.btnPatient.Location = new System.Drawing.Point(74, 325);
+            this.btnPatient.Location = new System.Drawing.Point(65, 325);
             this.btnPatient.Name = "btnPatient";
-            this.btnPatient.Size = new System.Drawing.Size(100, 42);
+            this.btnPatient.Size = new System.Drawing.Size(130, 42);
             this.btnPatient.TabIndex = 1;
-            this.btnPatient.Text = "Hasta";
+            this.btnPatient.Text = "Hasta Girisi";
             this.btnPatient.UseVisualStyleBackColor = true;
+            this.btnPatient.Click += new System.EventHandler(this.btnPatient_Click);
             // 
             // label1
             // 
@@ -63,21 +65,23 @@
             // 
             // btnDoctor
             // 
-            this.btnDoctor.Location = new System.Drawing.Point(290, 325);
+            this.btnDoctor.Location = new System.Drawing.Point(279, 325);
             this.btnDoctor.Name = "btnDoctor";
-            this.btnDoctor.Size = new System.Drawing.Size(100, 42);
+            this.btnDoctor.Size = new System.Drawing.Size(132, 42);
             this.btnDoctor.TabIndex = 4;
-            this.btnDoctor.Text = "Doktor";
+            this.btnDoctor.Text = "Doktor Girisi";
             this.btnDoctor.UseVisualStyleBackColor = true;
+            this.btnDoctor.Click += new System.EventHandler(this.btnDoctor_Click);
             // 
             // btnSecretary
             // 
-            this.btnSecretary.Location = new System.Drawing.Point(506, 325);
+            this.btnSecretary.Location = new System.Drawing.Point(494, 325);
             this.btnSecretary.Name = "btnSecretary";
-            this.btnSecretary.Size = new System.Drawing.Size(100, 42);
+            this.btnSecretary.Size = new System.Drawing.Size(141, 42);
             this.btnSecretary.TabIndex = 6;
-            this.btnSecretary.Text = "Sekreter";
+            this.btnSecretary.Text = "Sekreter Girisi";
             this.btnSecretary.UseVisualStyleBackColor = true;
+            this.btnSecretary.Click += new System.EventHandler(this.btnSecretary_Click);
             // 
             // pictureBox5
             // 
@@ -124,6 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(682, 380);
             this.Controls.Add(this.pictureBox5);
@@ -135,9 +140,11 @@
             this.Controls.Add(this.btnPatient);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimizeBox = false;
             this.Name = "FrmLogin";
-            this.Text = "Giriş Sayfası";
+            this.Text = "Pistipist Hastanesi Giriş Sayfası";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

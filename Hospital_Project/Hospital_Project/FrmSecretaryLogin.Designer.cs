@@ -1,6 +1,6 @@
 ﻿namespace Hospital_Project
 {
-    partial class FrmSecretary
+    partial class FrmSecretaryLogin
     {
         /// <summary>
         /// Required designer variable.
