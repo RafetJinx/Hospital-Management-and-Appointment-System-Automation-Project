@@ -67,11 +67,12 @@ namespace Hospital_Project
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SqlCommand sqlCommand = new SqlCommand("INSERT INTO Appointments (AppointmentDate,AppointmentHour,AppointmentBranch,AppointmentDoctorFullName) values (@p1,@p2,@p3,@p4)", conn.connection());
+            SqlCommand sqlCommand = new SqlCommand("INSERT INTO Appointments (AppointmentDate,AppointmentHour,AppointmentBranch,AppointmentDoctorFullName,AppointmentStatus) values (@p1,@p2,@p3,@p4,@p5)", conn.connection());
             sqlCommand.Parameters.AddWithValue("@p1", mskDate.Text);
             sqlCommand.Parameters.AddWithValue("@p2", mskHour.Text);
             sqlCommand.Parameters.AddWithValue("@p3", cmbBranch.Text);
             sqlCommand.Parameters.AddWithValue("@p4", cmbDoctor.Text);
+            sqlCommand.Parameters.AddWithValue("@p5", false);
             sqlCommand.ExecuteNonQuery();
             conn.connection().Close();
             MessageBox.Show("Randevu Olusturuldu","Bilgilendirme",MessageBoxButtons.OK,MessageBoxIcon.Information);

@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAppointment = new System.Windows.Forms.Button();
-            this.rtxtReport = new System.Windows.Forms.RichTextBox();
+            this.rchtxtReport = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbDoctors = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,6 +46,8 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -118,8 +120,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtId);
+            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.btnAppointment);
-            this.groupBox2.Controls.Add(this.rtxtReport);
+            this.groupBox2.Controls.Add(this.rchtxtReport);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.cbDoctors);
             this.groupBox2.Controls.Add(this.label4);
@@ -127,32 +131,33 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(0, 192);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(262, 314);
+            this.groupBox2.Size = new System.Drawing.Size(262, 349);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Paneli";
             // 
             // btnAppointment
             // 
-            this.btnAppointment.Location = new System.Drawing.Point(92, 260);
+            this.btnAppointment.Location = new System.Drawing.Point(93, 297);
             this.btnAppointment.Name = "btnAppointment";
             this.btnAppointment.Size = new System.Drawing.Size(131, 46);
             this.btnAppointment.TabIndex = 2;
             this.btnAppointment.Text = "Randevu Al";
             this.btnAppointment.UseVisualStyleBackColor = true;
+            this.btnAppointment.Click += new System.EventHandler(this.btnAppointment_Click);
             // 
-            // rtxtReport
+            // rchtxtReport
             // 
-            this.rtxtReport.Location = new System.Drawing.Point(92, 153);
-            this.rtxtReport.Name = "rtxtReport";
-            this.rtxtReport.Size = new System.Drawing.Size(131, 92);
-            this.rtxtReport.TabIndex = 5;
-            this.rtxtReport.Text = "";
+            this.rchtxtReport.Location = new System.Drawing.Point(93, 190);
+            this.rchtxtReport.Name = "rchtxtReport";
+            this.rchtxtReport.Size = new System.Drawing.Size(131, 92);
+            this.rchtxtReport.TabIndex = 5;
+            this.rchtxtReport.Text = "";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 153);
+            this.label5.Location = new System.Drawing.Point(13, 190);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 23);
             this.label5.TabIndex = 4;
@@ -161,7 +166,7 @@
             // cbDoctors
             // 
             this.cbDoctors.FormattingEnabled = true;
-            this.cbDoctors.Location = new System.Drawing.Point(92, 97);
+            this.cbDoctors.Location = new System.Drawing.Point(93, 134);
             this.cbDoctors.Name = "cbDoctors";
             this.cbDoctors.Size = new System.Drawing.Size(131, 31);
             this.cbDoctors.TabIndex = 3;
@@ -170,7 +175,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 105);
+            this.label4.Location = new System.Drawing.Point(13, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 23);
             this.label4.TabIndex = 2;
@@ -179,7 +184,7 @@
             // cbBranch
             // 
             this.cbBranch.FormattingEnabled = true;
-            this.cbBranch.Location = new System.Drawing.Point(92, 41);
+            this.cbBranch.Location = new System.Drawing.Point(93, 78);
             this.cbBranch.Name = "cbBranch";
             this.cbBranch.Size = new System.Drawing.Size(131, 31);
             this.cbBranch.TabIndex = 1;
@@ -188,7 +193,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 49);
+            this.label3.Location = new System.Drawing.Point(13, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 23);
             this.label3.TabIndex = 0;
@@ -218,7 +223,7 @@
             this.groupBox4.Controls.Add(this.dataGridView1);
             this.groupBox4.Location = new System.Drawing.Point(268, 278);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(575, 228);
+            this.groupBox4.Size = new System.Drawing.Size(575, 263);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Aktif Randevular";
@@ -229,15 +234,33 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(569, 198);
+            this.dataGridView1.Size = new System.Drawing.Size(569, 233);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 23);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Id:";
+            // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(93, 33);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 31);
+            this.txtId.TabIndex = 7;
             // 
             // FrmPatientDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(852, 510);
+            this.ClientSize = new System.Drawing.Size(852, 553);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
@@ -268,7 +291,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnAppointment;
-        private System.Windows.Forms.RichTextBox rtxtReport;
+        private System.Windows.Forms.RichTextBox rchtxtReport;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbDoctors;
         private System.Windows.Forms.Label label4;
@@ -279,5 +302,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.LinkLabel llblUpdateDetail;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label6;
     }
 }

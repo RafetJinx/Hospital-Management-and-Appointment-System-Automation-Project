@@ -81,7 +81,7 @@ namespace Hospital_Project
         private void cbDoctors_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Appointments WHERE AppointmentBranch='" + cbBranch.Text + "'", conn.connection());
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Appointments WHERE AppointmentBranch='" + cbBranch.Text + "'" + "AND AppointmentDoctorFullName='" + cbDoctors.Text + "' AND AppointmentStatus=0", conn.connection());
             dataAdapter.Fill(dt);
             dataGridView1.DataSource = dt;
         }
@@ -91,6 +91,23 @@ namespace Hospital_Project
             FrmUpdatePatientDetail frmUpdatePatientDetail = new FrmUpdatePatientDetail();
             frmUpdatePatientDetail.Tc = lblTC.Text;
             frmUpdatePatientDetail.Show();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int choosen = dataGridView1.SelectedCells[0].RowIndex;
+            txtId.Text = dataGridView1.Rows[choosen].Cells[0].Value.ToString();
+        }
+
+        private void btnAppointment_Click(object sender, EventArgs e)
+        {
+            SqlCommand sqlCommand = new SqlCommand("UPDATE Appointments SET AppointmentStatus=1,PatientIdentityNumber=@p1,PatientComplaint=@p2 WHERE AppointmentId=@p3",conn.connection());
+            sqlCommand.Parameters.AddWithValue("@p1", lblTC.Text);
+            sqlCommand.Parameters.AddWithValue("@p2", rchtxtReport.Text);
+            sqlCommand.Parameters.AddWithValue("@p3", txtId.Text);
+            sqlCommand.ExecuteNonQuery();
+            conn.connection().Close();
+            MessageBox.Show("Randevu alindi","Bilgilendirme",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }
