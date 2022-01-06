@@ -151,6 +151,7 @@
             this.btnUpdateDoctorDetail.TabIndex = 45;
             this.btnUpdateDoctorDetail.Text = "Bilgileri Guncelle";
             this.btnUpdateDoctorDetail.UseVisualStyleBackColor = true;
+            this.btnUpdateDoctorDetail.Click += new System.EventHandler(this.btnUpdateDoctorDetail_Click);
             // 
             // FrmUpdateDoctorDetail
             // 
@@ -171,9 +172,10 @@
             this.Controls.Add(this.msktxtTC);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmUpdateDoctorDetail";
             this.Text = "FrmUpdateDoctorDetail";
+            this.Load += new System.EventHandler(this.FrmUpdateDoctorDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

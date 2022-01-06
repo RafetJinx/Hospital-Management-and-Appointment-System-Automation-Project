@@ -34,18 +34,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rchPatientComplaint = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnUpdateDoctorDetail = new System.Windows.Forms.Button();
-            this.btnAnnouncement = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnAnnouncement = new System.Windows.Forms.Button();
+            this.btnUpdateDoctorDetail = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -56,7 +56,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(1, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(272, 146);
+            this.groupBox1.Size = new System.Drawing.Size(294, 146);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Doktor Bilgileri";
@@ -99,32 +99,42 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.richTextBox1);
+            this.groupBox2.Controls.Add(this.rchPatientComplaint);
             this.groupBox2.Location = new System.Drawing.Point(1, 154);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(272, 236);
+            this.groupBox2.Size = new System.Drawing.Size(294, 236);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Detay";
             // 
-            // richTextBox1
+            // rchPatientComplaint
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 27);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(266, 206);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.rchPatientComplaint.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rchPatientComplaint.Location = new System.Drawing.Point(3, 27);
+            this.rchPatientComplaint.Name = "rchPatientComplaint";
+            this.rchPatientComplaint.Size = new System.Drawing.Size(288, 206);
+            this.rchPatientComplaint.TabIndex = 0;
+            this.rchPatientComplaint.Text = "";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Location = new System.Drawing.Point(279, 2);
+            this.groupBox3.Location = new System.Drawing.Point(301, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(532, 528);
+            this.groupBox3.Size = new System.Drawing.Size(551, 528);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Randevu Listesi";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 27);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(545, 498);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox4
             // 
@@ -133,67 +143,62 @@
             this.groupBox4.Controls.Add(this.btnUpdateDoctorDetail);
             this.groupBox4.Location = new System.Drawing.Point(4, 396);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(269, 134);
+            this.groupBox4.Size = new System.Drawing.Size(291, 134);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Hizli Erisim";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(132, 82);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(153, 36);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "Cikis";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnAnnouncement
+            // 
+            this.btnAnnouncement.Location = new System.Drawing.Point(132, 30);
+            this.btnAnnouncement.Name = "btnAnnouncement";
+            this.btnAnnouncement.Size = new System.Drawing.Size(153, 36);
+            this.btnAnnouncement.TabIndex = 6;
+            this.btnAnnouncement.Text = "Duyurular";
+            this.btnAnnouncement.UseVisualStyleBackColor = true;
+            this.btnAnnouncement.Click += new System.EventHandler(this.btnAnnouncement_Click);
             // 
             // btnUpdateDoctorDetail
             // 
             this.btnUpdateDoctorDetail.Location = new System.Drawing.Point(8, 30);
             this.btnUpdateDoctorDetail.Name = "btnUpdateDoctorDetail";
-            this.btnUpdateDoctorDetail.Size = new System.Drawing.Size(113, 88);
+            this.btnUpdateDoctorDetail.Size = new System.Drawing.Size(118, 88);
             this.btnUpdateDoctorDetail.TabIndex = 5;
             this.btnUpdateDoctorDetail.Text = "Bilgi Duzenle";
             this.btnUpdateDoctorDetail.UseVisualStyleBackColor = true;
-            // 
-            // btnAnnouncement
-            // 
-            this.btnAnnouncement.Location = new System.Drawing.Point(129, 30);
-            this.btnAnnouncement.Name = "btnAnnouncement";
-            this.btnAnnouncement.Size = new System.Drawing.Size(134, 36);
-            this.btnAnnouncement.TabIndex = 6;
-            this.btnAnnouncement.Text = "Duyurular";
-            this.btnAnnouncement.UseVisualStyleBackColor = true;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(129, 82);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(134, 36);
-            this.btnExit.TabIndex = 8;
-            this.btnExit.Text = "Cikis";
-            this.btnExit.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 27);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(526, 498);
-            this.dataGridView1.TabIndex = 0;
+            this.btnUpdateDoctorDetail.Click += new System.EventHandler(this.btnUpdateDoctorDetail_Click);
             // 
             // FrmDoctorDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(823, 533);
+            this.ClientSize = new System.Drawing.Size(864, 533);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmDoctorDetail";
             this.Text = "FrmDoctorDetail";
+            this.Load += new System.EventHandler(this.FrmDoctorDetail_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -206,7 +211,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rchPatientComplaint;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox4;

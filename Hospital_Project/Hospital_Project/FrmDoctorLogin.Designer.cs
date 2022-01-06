@@ -38,26 +38,28 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(223, 184);
+            this.btnLogin.Location = new System.Drawing.Point(210, 188);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(110, 42);
+            this.btnLogin.Size = new System.Drawing.Size(146, 42);
             this.btnLogin.TabIndex = 13;
             this.btnLogin.Text = "Giris Yap";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(223, 139);
+            this.txtPassword.Location = new System.Drawing.Point(210, 139);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(110, 31);
+            this.txtPassword.Size = new System.Drawing.Size(146, 31);
             this.txtPassword.TabIndex = 11;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // msktxtTC
             // 
-            this.msktxtTC.Location = new System.Drawing.Point(223, 84);
+            this.msktxtTC.Location = new System.Drawing.Point(210, 84);
             this.msktxtTC.Mask = "00000000000";
             this.msktxtTC.Name = "msktxtTC";
-            this.msktxtTC.Size = new System.Drawing.Size(110, 31);
+            this.msktxtTC.Size = new System.Drawing.Size(146, 31);
             this.msktxtTC.TabIndex = 10;
             this.msktxtTC.ValidatingType = typeof(int);
             // 
@@ -83,7 +85,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ink Free", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Location = new System.Drawing.Point(24, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(332, 46);
             this.label1.TabIndex = 7;
@@ -94,7 +96,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(357, 242);
+            this.ClientSize = new System.Drawing.Size(383, 242);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.msktxtTC);
@@ -102,9 +104,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmDoctorLogin";
             this.Text = "FrmDoctorLogin";
+            this.Load += new System.EventHandler(this.FrmDoctorLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
