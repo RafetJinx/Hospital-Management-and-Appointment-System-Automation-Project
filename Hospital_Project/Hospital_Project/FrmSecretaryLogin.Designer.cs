@@ -40,24 +40,26 @@
             // 
             this.btnLogin.Location = new System.Drawing.Point(223, 173);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(110, 42);
+            this.btnLogin.Size = new System.Drawing.Size(153, 42);
             this.btnLogin.TabIndex = 19;
             this.btnLogin.Text = "Giris Yap";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(223, 128);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(110, 31);
+            this.txtPassword.Size = new System.Drawing.Size(153, 31);
             this.txtPassword.TabIndex = 18;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // msktxtTC
             // 
             this.msktxtTC.Location = new System.Drawing.Point(223, 73);
             this.msktxtTC.Mask = "00000000000";
             this.msktxtTC.Name = "msktxtTC";
-            this.msktxtTC.Size = new System.Drawing.Size(110, 31);
+            this.msktxtTC.Size = new System.Drawing.Size(153, 31);
             this.msktxtTC.TabIndex = 17;
             this.msktxtTC.ValidatingType = typeof(int);
             // 
@@ -89,7 +91,7 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Sekreter Giris Paneli";
             // 
-            // FrmSecretary
+            // FrmSecretaryLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,8 +104,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Name = "FrmSecretary";
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "FrmSecretaryLogin";
             this.Text = "FrmSecretary";
             this.ResumeLayout(false);
             this.PerformLayout();

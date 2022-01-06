@@ -52,14 +52,15 @@
             this.cbBranch.Location = new System.Drawing.Point(203, 192);
             this.cbBranch.Name = "cbBranch";
             this.cbBranch.Size = new System.Drawing.Size(137, 31);
-            this.cbBranch.TabIndex = 54;
+            this.cbBranch.TabIndex = 4;
+            this.cbBranch.SelectedIndexChanged += new System.EventHandler(this.cbBranch_SelectedIndexChanged);
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(203, 229);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(137, 31);
-            this.txtPassword.TabIndex = 53;
+            this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label3
@@ -77,7 +78,7 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(137, 31);
-            this.txtName.TabIndex = 51;
+            this.txtName.TabIndex = 1;
             // 
             // txtLastName
             // 
@@ -85,7 +86,7 @@
             this.txtLastName.Margin = new System.Windows.Forms.Padding(5);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(137, 31);
-            this.txtLastName.TabIndex = 50;
+            this.txtLastName.TabIndex = 2;
             // 
             // label5
             // 
@@ -123,7 +124,7 @@
             this.msktxtTC.Mask = "00000000000";
             this.msktxtTC.Name = "msktxtTC";
             this.msktxtTC.Size = new System.Drawing.Size(137, 31);
-            this.msktxtTC.TabIndex = 46;
+            this.msktxtTC.TabIndex = 3;
             this.msktxtTC.ValidatingType = typeof(int);
             // 
             // label2
@@ -141,35 +142,40 @@
             this.btnAdd.Location = new System.Drawing.Point(253, 274);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(87, 46);
-            this.btnAdd.TabIndex = 55;
+            this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(348, 71);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(401, 249);
+            this.dataGridView1.Size = new System.Drawing.Size(764, 249);
             this.dataGridView1.TabIndex = 56;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // btnDel
             // 
             this.btnDel.Location = new System.Drawing.Point(134, 274);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(87, 46);
-            this.btnDel.TabIndex = 57;
+            this.btnDel.TabIndex = 577;
             this.btnDel.Text = "Sil";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(18, 274);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(87, 46);
-            this.btnUpdate.TabIndex = 58;
+            this.btnUpdate.TabIndex = 586;
             this.btnUpdate.Text = "Guncelle";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label6
             // 
@@ -186,7 +192,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(761, 332);
+            this.ClientSize = new System.Drawing.Size(1124, 332);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDel);
@@ -203,9 +209,11 @@
             this.Controls.Add(this.msktxtTC);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MinimizeBox = false;
             this.Name = "FrmDoctorPanel";
             this.Text = "FrmDoctorPanel";
+            this.Load += new System.EventHandler(this.FrmDoctorPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

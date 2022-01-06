@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Hospital_Project
 {
@@ -15,6 +16,16 @@ namespace Hospital_Project
         public FrmAnnouncements()
         {
             InitializeComponent();
+        }
+
+        SqlConn conn = new SqlConn();
+
+        private void FrmAnnouncements_Load(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Announcements", conn.connection());
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }
